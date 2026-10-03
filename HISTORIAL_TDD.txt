@@ -1,0 +1,11 @@
+d77dfd8 chore: preparar estructura del proyecto TDD
+2f60b12 red: prueba edad basica
+599a18f green: implementar calculo basico de edad
+cf1687b red: pruebas cumpleaños pendiente y cumpleaños actual
+0a38992 green: considerar cumpleaños pendiente
+b9e0210 red: prueba fecha de nacimiento futura
+4aea413 green: validar fecha de nacimiento futura
+de9babd red: agregar pruebas para nacidos el 29 de febrero
+cda4a1f green: comportamiento bisiesto ya cubierto por comparacion de fechas
+dfa8516 refactor: separar validacion y comprobacion de cumpleaños
+e4b26eb docs: guardar resultado final de pruebas
