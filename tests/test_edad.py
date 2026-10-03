@@ -1,5 +1,7 @@
 from datetime import date
 
+import pytest
+
 from src.edad import calcular_edad
 
 
@@ -21,3 +23,13 @@ def test_edad_el_dia_del_cumpleanios():
     hoy = date(2026, 9, 30)
 
     assert calcular_edad(nacimiento, hoy) == 26
+
+def test_fecha_nacimiento_futura_lanza_excepcion():
+    nacimiento = date(2027, 1, 1)
+    hoy = date(2026, 9, 30)
+
+    with pytest.raises(
+        ValueError,
+        match="La fecha de nacimiento no puede ser posterior a la fecha actual",
+    ):
+        calcular_edad(nacimiento, hoy)
