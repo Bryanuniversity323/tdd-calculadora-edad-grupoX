@@ -1,4 +1,9 @@
 def calcular_edad(fecha_nacimiento, fecha_actual):
+    if fecha_nacimiento > fecha_actual:
+        raise ValueError(
+            "La fecha de nacimiento no puede ser posterior a la fecha actual"
+        )
+
     edad = fecha_actual.year - fecha_nacimiento.year
 
     if (fecha_actual.month, fecha_actual.day) < (
